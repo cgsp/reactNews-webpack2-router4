@@ -17,8 +17,11 @@
 </html>
 <script>
   window.onload = function () {
-    var scriptEle = document.createElement('script');
-    scriptEle.src = '/dist/bundle.js';
-    document.body.appendChild(scriptEle);
+    var scriptEle1 = document.createElement('script');
+    scriptEle1.src = '/dist/vendor.js';
+    document.body.appendChild(scriptEle1);
+    var scriptEle2 = document.createElement('script');
+    scriptEle2.src = '/dist/app.js';
+    document.body.appendChild(scriptEle2);
   }
 </script>

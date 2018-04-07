@@ -5,8 +5,9 @@
   "main": "root.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/webpack --progress --display-modules --profile --json > stats.json --colors --config webpack.production.config.js",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --env development",
+    "build": "webpack -p",
+    "stats": "webpack --env production --profile --json > stats.json"
   },
   "author": "",
   "license": "ISC",
@@ -32,6 +33,7 @@
   },
   "devDependencies": {
     "babel-plugin-import": "1.0.1",
+    "babili-webpack-plugin": "^0.1.2",
     "less": "2.7.2",
     "less-loader": "2.2.3",
     "webpack": "2.6.1",
